@@ -23,7 +23,9 @@ Welcome to SRKR Educa, a simple and responsive educational website built using H
 
 ## 🔧 Tech Stack
 
-HTML5,
-CSS3,
+HTML5
+
+CSS3
+
 JavaScript 
 
