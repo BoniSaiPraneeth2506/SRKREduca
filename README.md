@@ -1,8 +1,8 @@
-#📘 SRKR Educa - Educational Website
+# 📘 SRKR Educa - Educational Website
 
 Welcome to SRKR Educa, a simple and responsive educational website built using HTML, CSS, and JavaScript. This project is designed for showcasing modern front-end development skills for educational institutions like colleges or coaching centers.
 
-##🚀 Features
+## 🚀 Features
 ✅ Responsive landing page design
 🧭 Fixed navigation bar with smooth scrolling
 🖼️ Hero section with background image and call-to-action buttons
@@ -13,7 +13,7 @@ Welcome to SRKR Educa, a simple and responsive educational website built using H
 📱 Fully responsive design for mobile, tablet, and desktop
 🦶 Footer with social links and navigation
 
-##🔧 Tech Stack
+## 🔧 Tech Stack
 
 HTML5
 CSS3
