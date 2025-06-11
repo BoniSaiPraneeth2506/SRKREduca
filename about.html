@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRKR Educa</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+      :root {
+        --primary-color: rgb(21, 21, 100);
+        --secondary-color: #fdc93b;
+        --text-color: rgb(35, 35, 85);
+        --light-text: #7b838a;
+        --bg-light: #f9f9ff;
+        --bg-features: #F0F0FF;
+        --footer-bg: #101c32;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+        color: var(--text-color);
+      }
+
+      span {
+        font-size: 0.9rem;
+        color: #757373;
+      }
+
+      h6 {
+        font-size: 1.1rem;
+        color: rgb(24, 24, 49);
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Navigation */
+      nav{
+  position:fixed;
+  width:100%;
+  background-color: #fff;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding:1vw 8vw;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  align-items: center;
+  height:5rem;
+  z-index: 999;
+}
+
+      nav img {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+      }
+
+      .navigation ul {
+        display: flex;
+        align-items: center;
+      }
+
+      .navigation ul li {
+        list-style-type: none;
+        margin-left: 30px;
+      }
+
+      .navigation ul li a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.3s ease;
+      }
+
+      .navigation ul li a:hover,
+      .navigation ul li a.active {
+        color: var(--secondary-color);
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin: 5px 0;
+        transition: 0.3s;
+      }
+
+      /* Hero Section */
+      #about-home {
+        /* background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("images/frontpic.jpg");
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+        margin-top: 70px; */
+        background-image:linear-gradient(rgba(9,5,54,0.48),rgba(5,4,46,0.75)),url("images/frontpic.jpg");
+        width:100%;
+        height:100vh;
+        background-size: cover;
+        background-position: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        padding-bottom: 80px;
+      }
+      #about-home h2.typing {
+        color: #fff;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+        margin: 0 0 5px 0;
+      }
+
+/* Add this to style the typed text specifically */
+#about-home h2.typing #element {
+  color: #fff; /* Ensure the typed text is white */
+  font-size: inherit; /* Inherit font size from parent */
+  font-weight: inherit; /* Inherit font weight from parent */
+}
+
+/* Style for the typing cursor */
+.typed-cursor {
+  color: #fff;
+  font-size: 2.2rem;
+}
+      #about-home p{
+    width:45%;
+    color:#fff;
+    font-size: 0.95rem;
+    line-height: 25px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+      /* Typing Animation
+      .typing {
+        overflow: hidden;
+        border-right: 3px solid white;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: white }
+      } */
+
+      /* About Container */
+      #about-container {
+        display: flex;
+        align-items: center;
+        padding: 4rem 8vw;
+        gap: 2rem;
+      }
+
+      .about-image {
+        flex: 1;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-text h2 {
+        color: #29303B;
+        margin-bottom: 1rem;
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+      }
+
+      .about-text p {
+        color: #666;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-fe {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background-color: var(--bg-light);
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+
+      .about-fe:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      .about-fe img {
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
+
+      .fe-text h5 {
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      /* Features Section */
+      #features {
+        padding: 4rem 8vw;
+        text-align: center;
+        background-color: #f8f9fa;
+      }
+
+      #features p {
+        width: 80%;
+        margin: 1rem auto;
+        color: var(--light-text);
+      }
+
+      .fea-base {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .fea-box {
+        background-color: var(--bg-features);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .fea-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .fea-box i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .fea-box h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+      }
+
+      .fea-box p {
+        color: var(--light-text);
+      }
+
+      #trust{
+        text-align: center;
+        padding:8vw;
+      }
+      
+      #trust .trust-img{
+        margin-top:60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      #trust .trust-img img{
+        width:90px;
+        height:auto;
+      }
+
+      /* Footer Section */
+      footer {
+        padding: 4rem 8vw;
+        background-color: var(--footer-bg);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .footer-col {
+        min-width: 200px;
+        flex: 1;
+        margin-bottom: 2rem;
+        padding-right: 2rem;
+      }
+
+      footer h3 {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+      }
+
+      footer li {
+        list-style: none;
+        color: var(--light-text);
+        padding: 0.5rem 0;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      footer li:hover {
+        color: #fff;
+        transform: translateX(5px);
+      }
+
+      footer p {
+        color: var(--light-text);
+      }
+
+      .subscribe {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .subscribe input {
+        flex: 1;
+        min-width: 120px;
+        padding: 0.8rem 1rem;
+        background: #334F6C;
+        border: none;
+        outline: none;
+        color: #fff;
+      }
+
+      .subscribe a {
+        text-decoration: none;
+        padding: 0.8rem 1rem;
+        background-color: var(--secondary-color);
+        color: #fff;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: 0.3s;
+      }
+
+      .subscribe a:hover {
+        background-color: #fff;
+        color: var(--secondary-color);
+      }
+
+      .copyright {
+        width: 100%;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .pro-links {
+        display: flex;
+      }
+
+      .pro-links i {
+        background-color: #5f7185;
+        color: #fff;
+        padding: 10px;
+        border-radius: 50%;
+        margin-left: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .pro-links i:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-5px);
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 992px) {
+        #about-container {
+          flex-direction: column;
+        }
+
+        .about-image, .about-text {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .navigation {
+          position: fixed;
+          top: 70px;
+          right: -300px;
+          width: 300px;
+          height: 100vh;
+          background-color: #fff;
+          box-shadow: -5px 0 10px rgba(0,0,0,0.1);
+          transition: 0.5s;
+        }
+
+        .navigation.active {
+          right: 0;
+        }
+
+        .navigation ul {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 2rem;
+        }
+
+        .navigation ul li {
+          margin: 1rem 0;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .hamburger.active div:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active div:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active div:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .footer-col {
+          min-width: 45%;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        #about-home {
+          height: 40vh;
+        }
+
+        .footer-col {
+          min-width: 100%;
+        }
+
+        .copyright {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/0a9bc6dbd1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <nav>
+      <img src="images/srkrlogo.jpg" alt="SRKR Logo" />
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active"href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+          <li><a href="Register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    
+    <section id="about-home">
+        <h2 class="typing"><span id="element"></span></h2>
+      <p>
+        Welcome to SRKR Educa — your gateway to quality learning and skill development. Explore top courses, expert guidance, and a community dedicated to your success.
+      </p>
+    </section>
+    
+    <section id="about-container">
+      <div class="about-image">
+        <img src="images/a.png" alt="About SRKR" />
+      </div>
+      <div class="about-text">
+        <h2>Welcome to SRKR EDUCA, Enhance Your Skills with Best Online Courses</h2>
+        <p>You can complete a course in a day - free courses available!</p>
+        
+        <div class="about-fe">
+          <img src="images/fe1.png" alt="Feature icon" />
+          <div class="fe-text">
+            <h5>400+ Courses</h5>
+            <p>You can start and finish one of the courses on our site in a single day.</p>
+          </div>
+        </div>
+        
+        <div class="about-fe">
+          <img src="images/fe1.png" alt="Feature icon" />
+          <div class="fe-text">
+            <h5>Expert Instructors</h5>
+            <p>Learn from industry professionals with years of experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="features">
+      <h1>Awesome Features</h1>
+      <p>Replenish man have thing gathering lights yielding shall you</p>
+      <div class="fea-base">
+        <div class="fea-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Scholarship Facility</h3>
+          <p>One make creepeth, man bearing their firmament won't great heaven</p>
+        </div>
+        
+        <div class="fea-box">
+          <i class="fa-solid fa-book"></i>
+          <h3>Dell Online Courses</h3>
+          <p>One make creepeth, man bearing their firmament won't great heaven</p>
+        </div>
+        
+        <div class="fea-box">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Global Certification</h3>
+          <p>One make creepeth, man bearing their firmament won't great heaven</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust">
+      <h1>Sponsered by</h1>
+      <p>Replenish man have thing gathering lights yielding shall you</p>
+      <div class="trust-img">
+        <img src="images/trust (1).png">
+        <img src="images/trust (2).png">
+        <img src="images/trust (3).png">
+        <img src="images/trust (4).png">
+        <img src="images/trust (5).png">
+        <img src="images/trust (6).png">
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-col">
+        <h3>Top Products</h3>
+        <li>Manage Reputation</li>
+        <li>Power Tools</li>
+        <li>Managed Website</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <li>Jobs</li>
+        <li>Brand Assets</li>
+        <li>Investor Relations</li>
+        <li>Terms of Service</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Features</h3>
+        <li>Manage Reputation</li>
+        <li>Power Tools</li>
+        <li>Managed Website</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <li>Guides</li>
+        <li>Research</li>
+        <li>Experts</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>You can trust us. We only send promo offers.</p>
+        <div class="subscribe">
+          <input type="text" placeholder="Your Email Address">
+          <a href="#" class="yellow">SUBSCRIBE</a>
+        </div>
+      </div>
+    
+      <div class="copyright">
+        <p>Copyright ©2025 All rights reserved | SRKR Educa</p>
+        <div class="pro-links">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        var typed = new Typed("#element", {
+        strings: ["About SRKREduca"],
+        typeSpeed: 50,
+      });
+      // Mobile menu toggle
+      const hamburger = document.querySelector('.hamburger');
+      const navigation = document.querySelector('.navigation');
+      
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navigation.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking links
+      const navLinks = document.querySelectorAll('.navigation a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navigation.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

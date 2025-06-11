@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn More - SRKR Educa</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script
+      src="https://kit.fontawesome.com/0a9bc6dbd1.js" 
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+
+        body {
+          font-family: "Poppins", sans-serif;
+        }
+      /* Additional Learn More Page Styles */
+      .hero-section {
+        background-image: linear-gradient(rgb(35, 35, 85));
+        width: 100%;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px;
+      }
+
+      .hero-section h1 {
+        color: #fff;
+        font-size: 3.2rem;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        margin-bottom: 15px;
+        padding-top: 50px;
+      }
+
+      .hero-section p {
+        color: #fff;
+        width: 70%;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      .about-section {
+        padding: 5vw 8vw;
+        background-color: #f9f9ff;
+      }
+
+      .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .about-img {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      }
+
+      .about-img img {
+        width: 100%;
+        height: 450px;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .about-img:hover img {
+        transform: scale(1.05);
+      }
+
+      .about-text h2 {
+        font-size: 2.3rem;
+        color: rgb(35, 35, 85);
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .about-text h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 60px;
+        height: 4px;
+        background: #fdc93b;
+        border-radius: 2px;
+      }
+
+      .about-text p {
+        color: #545B6B;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+     /* .highlight-box {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 30px 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      }
+
+      .highlight-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+      }*/
+
+      .highlight-box h2 {
+        color: rgb(35, 35, 85);
+        margin-bottom: 15px;
+        font-size: 2rem;
+      }
+
+      .highlight-box p {
+        margin-bottom: 0;
+      }
+
+      .mission-section {
+        padding: 5vw 8vw;
+        background-image: linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .mission-heading {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .mission-heading h2 {
+        font-size: 2.5rem;
+        color: rgb(35, 35, 85);
+        margin-bottom: 15px;
+      }
+
+      .mission-heading p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #545B6B;
+      }
+
+      .mission-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .mission-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      }
+
+      .mission-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      }
+
+      .mission-card-header {
+        background: rgb(21,21,100);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .mission-card-header i {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #fdc93b;
+      }
+
+      .mission-card-header h3 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .mission-card-body {
+        padding: 25px;
+      }
+
+      .mission-card-body p {
+        color: #545B6B;
+        margin-bottom: 20px;
+      }
+
+      .mission-card-body ul {
+        padding-left: 20px;
+        color: #545B6B;
+      }
+
+      .mission-card-body ul li {
+        margin-bottom: 8px;
+      }
+
+      .cta-section {
+        padding: 5vw 8vw;
+        background: rgb(21,21,100);
+        color: #fff;
+        text-align: center;
+      }
+
+      .cta-section h2 {
+        font-size: 2.3rem;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .cta-section p {
+        max-width: 700px;
+        margin: 0 auto 30px;
+        color: rgba(255,255,255,0.85);
+        font-size: 1.1rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .cta-buttons a {
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 11px 35px;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .cta-buttons a.yellow {
+        color: rgb(21,21,100);
+        background-color: #fdc93b;
+      }
+
+      .cta-buttons a.yellow:hover {
+        background-color: #fff;
+      }
+
+      .cta-buttons a.outline {
+        color: #fff;
+        background-color: transparent;
+        border: 2px solid #fff;
+      }
+
+      .cta-buttons a.outline:hover {
+        background-color: rgba(255,255,255,0.15);
+      }
+
+      
+      .stats-section {
+        padding: 5vw 8vw;
+        background-color: #f9f9ff;
+      }
+
+      .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+      }
+
+      .stat-box {
+        background: #fff;
+        padding: 30px 20px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      }
+
+      .stat-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+      }
+
+      .stat-box i {
+        font-size: 2.5rem;
+        color: #fdc93b;
+        margin-bottom: 15px;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgb(21,21,100);
+        margin-bottom: 5px;
+      }
+
+      .stat-text {
+        color: #545B6B;
+        font-size: 1rem;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 900px) {
+        .about-container {
+          grid-template-columns: 1fr;
+        }
+        
+        .hero-section p {
+          width: 90%;
+        }
+        
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          height: 40vh;
+        }
+        
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+        
+        .about-text h2,
+        .mission-heading h2,
+        .cta-section h2 {
+          font-size: 1.8rem;
+        }
+        
+        .mission-card-header h3 {
+          font-size: 1.3rem;
+        }
+        
+        .stat-number {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-section {
+          height: auto;
+          padding: 60px 20px;
+        }
+        
+        .hero-section p {
+          width: 100%;
+        }
+        
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+          max-width: 250px;
+          margin: 0 auto;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <img src="images/srkrlogo.jpg" alt="logo" />
+
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fa-solid fa-circle-xmark"></i>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><button class="link-button" id="registerButton">Register</button></li>
+        </ul>
+        <img id="menu-btn" src="images/menu.png" alt="menu">
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div>
+        <h1>Discover SRKR Educa</h1>
+        <p>Your journey to excellence starts here. Learn about our mission, values, and how we're transforming education for the digital age.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-img">
+           <img src="images/frontpic.jpg">
+        </div>
+        <div class="about-text">
+          <h2>Who We Are</h2>
+          <p>SRKR Educa is a premier online education platform designed to empower learners worldwide with high-quality courses, expert instruction, and a supportive learning community.</p>
+          <p>Founded with a vision to make education accessible, engaging, and effective, we've helped thousands of students unlock their potential and achieve their career goals.</p>
+          
+          <div class="highlight-box">
+            <h2>Our Philosophy</h2>
+            <p>We believe that education should be transformative, personalized, and connected to real-world outcomes. Every course is crafted with this philosophy in mind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-section">
+      <div class="mission-heading">
+        <h2>Our Mission & Values</h2>
+        <p>Guided by a commitment to excellence and innovation, we're reshaping the future of learning.</p>
+      </div>
+      
+      <div class="mission-cards">
+        <div class="mission-card">
+          <div class="mission-card-header">
+            <i class="fas fa-rocket"></i>
+            <h3>Our Mission</h3>
+          </div>
+          <div class="mission-card-body">
+            <p>To democratize education by providing accessible, high-quality learning experiences that prepare students for success in a rapidly evolving world.</p>
+            <ul>
+              <li>Universal access to quality education</li>
+              <li>Industry-relevant curriculum development</li>
+              <li>Personalized learning pathways</li>
+              <li>Building a global community of learners</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="mission-card">
+          <div class="mission-card-header">
+            <i class="fas fa-eye"></i>
+            <h3>Our Vision</h3>
+          </div>
+          <div class="mission-card-body">
+            <p>To be the global leader in transformative online education, empowering millions to achieve their personal and professional aspirations.</p>
+            <ul>
+              <li>Creating pioneers in every field</li>
+              <li>Bridging education and employment gaps</li>
+              <li>Continuous innovation in teaching methods</li>
+              <li>Fostering lifelong learning habits</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="mission-card">
+          <div class="mission-card-header">
+            <i class="fas fa-heart"></i>
+            <h3>Our Values</h3>
+          </div>
+          <div class="mission-card-body">
+            <p>Our core values guide everything we do and shape how we interact with our students, partners, and each other.</p>
+            <ul>
+              <li>Excellence in all we do</li>
+              <li>Integrity and transparency</li>
+              <li>Innovation and adaptability</li>
+              <li>Inclusivity and respect for diversity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stat-box">
+          <i class="fas fa-users"></i>
+          <div class="stat-number">15,000+</div>
+          <div class="stat-text">Happy Students</div>
+        </div>
+        
+        <div class="stat-box">
+          <i class="fas fa-laptop"></i>
+          <div class="stat-number">200+</div>
+          <div class="stat-text">Courses</div>
+        </div>
+        
+        <div class="stat-box">
+          <i class="fas fa-award"></i>
+          <div class="stat-number">95%</div>
+          <div class="stat-text">Success Rate</div>
+        </div>
+        
+        <div class="stat-box">
+          <i class="fas fa-globe"></i>
+          <div class="stat-number">50+</div>
+          <div class="stat-text">Countries</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Begin Your Learning Journey</h2>
+      <p>Whether you're looking to advance your career, explore new interests, or master new skills, SRKR Educa has the perfect course for you.</p>
+      <div class="cta-buttons">
+        <a href="courses.html" class="yellow">Browse Courses</a>
+        <a href="#" class="outline" id="registerButtonCta">Register Now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-col">
+        <h3>Top Products</h3>
+        <li>Manage Reputation</li>
+        <li>Power Tools</li>
+        <li>Managed Website</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <li>Jobs</li>
+        <li>Brand Assets</li>
+        <li>Investor Relations</li>
+        <li>Terms of Service</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Features</h3>
+        <li>Manage Reputation</li>
+        <li>Power Tools</li>
+        <li>Managed Website</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <li>Guides</li>
+        <li>Research</li>
+        <li>Experts</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>You can trust us. We only send promo offers.</p>
+        <div class="subscribe">
+          <input type="text" placeholder="Your Email Address">
+          <a href="#" class="yellow">SUBSCRIBE</a>
+        </div>
+      </div>
+    
+      <div class="copyright">
+        <p>Copyright ©2025 All rights reserved | SRKR Educa</p>
+        <div class="pro-links">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Register Popup -->
+    <div id="registerPopup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Create an Account</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+          </div>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Menu Toggle
+      $('#menu-btn').click(function () {
+        $('nav .navigation ul').addClass('active');
+      });
+
+      $('#menu-close').click(function () {
+        $('nav .navigation ul').removeClass('active');
+      });
+      
+      // Register Popup
+      document.getElementById('registerButton').addEventListener('click', function() {
+        document.getElementById('registerPopup').style.display = 'flex';
+      });
+      
+      document.getElementById('registerButtonCta').addEventListener('click', function() {
+        document.getElementById('registerPopup').style.display = 'flex';
+      });
+      
+      document.querySelector('.close-btn').addEventListener('click', function() {
+        document.getElementById('registerPopup').style.display = 'none';
+      });
+      
+      document.getElementById('registerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Registration submitted successfully!');
+        document.getElementById('registerPopup').style.display = 'none';
+      });
+      
+      // Close popup when clicking outside
+      window.addEventListener('click', function(e) {
+        if (e.target == document.getElementById('registerPopup')) {
+          document.getElementById('registerPopup').style.display = 'none';
+        }
+      });
+   
+    </script>
+  </body>
+</html>

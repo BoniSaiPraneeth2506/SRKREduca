@@ -1,0 +1,740 @@
+/* Enrollment page specific styles */
+.course-header {
+    background-image: linear-gradient(rgba(9,5,54,0.6),rgba(5,4,46,0.8)), url("images/c1.jpg");
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5vw;
+  }
+  
+  .course-header h1 {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    padding-top: 20px;
+  }
+  
+  .course-header p {
+    color: #fff;
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .enrollment-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw 8vw;
+    padding-bottom: 2rem;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .course-details {
+    flex: 2;
+    min-width: 320px;
+  }
+  
+  .enrollment-sidebar {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .course-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+  }
+  
+  .course-info h2 {
+    font-size: 1.8rem;
+    color: rgb(35, 35, 85);
+    margin-bottom: 20px;
+  }
+  
+  .course-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #545B6B;
+    font-size: 0.9rem;
+  }
+  
+  .meta-item i {
+    color: #CCAA66;
+  }
+  
+  .course-desc p {
+    color: #545B6B;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .what-you-learn {
+    margin-top: 30px;
+  }
+  
+  .what-you-learn h3 {
+    font-size: 1.4rem;
+    color: rgb(35, 35, 85);
+    margin-bottom: 20px;
+  }
+  
+  .learn-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .learn-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .learn-item i {
+    color: #0A2342;
+    margin-top: 5px;
+  }
+  
+  .course-curriculum {
+    margin-top: 40px;
+  }
+  
+  .course-curriculum h3 {
+    font-size: 1.4rem;
+    color: rgb(35, 35, 85);
+    margin-bottom: 20px;
+  }
+  
+  .module {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .module-header {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .module-header:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .module-header h4 {
+    color: rgb(35, 35, 85);
+    font-size: 1.1rem;
+  }
+  
+  .module-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .module-content.active {
+    max-height: 500px;
+    padding: 15px 20px;
+  }
+  
+  .lesson {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .lesson:last-child {
+    border-bottom: none;
+  }
+  
+  .lesson-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .lesson-title i {
+    font-size: 0.9rem;
+    color: #CCAA66;
+  }
+  
+  .lesson-meta {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  /* Course card styles */
+  .course-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    top: 100px;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 25px;
+  }
+  
+  .card-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+    margin-bottom: 15px;
+  }
+  
+  .original-price {
+    font-size: 1.2rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 10px;
+  }
+  
+  .card-features {
+    margin: 20px 0;
+  }
+  
+  .card-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .card-feature i {
+    color: #CCAA66;
+  }
+  
+  .enroll-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #0A2342;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+  
+  .enroll-btn:hover {
+    background-color: rgb(21, 21, 100);
+    transform: translateY(-3px);
+  }
+  
+  .money-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+  
+  .money-back i {
+    color: #CCAA66;
+  }
+  
+  /* Instructor styles */
+  .instructor {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.074);
+    padding: 25px;
+    margin-top: 30px;
+  }
+  
+  .instructor h3 {
+    font-size: 1.4rem;
+    color: rgb(35, 35, 85);
+    margin-bottom: 20px;
+  }
+  
+  .instructor-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .instructor-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .instructor-info h4 {
+    font-size: 1.2rem;
+    color: rgb(35, 35, 85);
+    margin-bottom: 5px;
+  }
+  
+  .instructor-info p {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .instructor-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0A2342;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  .instructor-bio {
+    color: #545B6B;
+    line-height: 1.6;
+  }
+  
+  /* Register popup styles */
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .popup-content h2 {
+    margin-bottom: 20px;
+    color: rgb(35, 35, 85);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0A2342;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .sign-in-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #0A2342;
+    text-decoration: none;
+  }
+  
+  /* Scroll to top button */
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #0A2342;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    transition: all 0.3s ease;
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: rgb(21, 21, 100);
+    transform: translateY(-3px);
+  }
+  
+  /* Add this to your enroll.css file */
+
+ /* Replace your existing course-preview CSS with this improved version */
+
+.course-preview {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+  width:86%;
+  margin:auto;
+}
+
+.preview-header {
+  background-color: #f9f9f9;
+  padding: 20px 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.preview-header h3 {
+  font-size: 1.5rem;
+  color: rgb(35, 35, 85);
+  margin-bottom: 5px;
+}
+
+.preview-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.preview-videos {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.video-item {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-info {
+  padding: 20px;
+}
+
+.video-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.video-title i {
+  color: #CCAA66;
+  font-size: 1.2rem;
+}
+
+.video-title h4 {
+  font-size: 1.2rem;
+  color: rgb(35, 35, 85);
+  margin: 0;
+}
+
+.video-info p {
+  color: #545B6B;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.video-meta {
+  display: flex;
+  gap: 20px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.video-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.video-meta i {
+  color: #CCAA66;
+}
+
+.preview-videos {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* For medium screens and up */
+@media (min-width: 768px) {
+  .preview-videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+
+
+
+.payment-popup {
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+}
+
+.popup-content h2{
+  margin-bottom: 6px;
+}
+.course-summary {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.payment-course-img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.course-summary-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.payment-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FDC93B;
+}
+
+.payment-price .original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-weight: normal;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+.payment-tabs {
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.payment-tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.payment-tab.active {
+  border-bottom: 1px solid #FDC93B;
+  color: #333;
+}
+
+.payment-method-content {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.card-input-wrapper {
+  position: relative;
+}
+
+.card-icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.card-icons i {
+  margin-left: 5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group.half {
+  width: 50%;
+}
+
+.paypal-info, .upi-info {
+  text-align: center;
+  padding: 18px;
+}
+
+.paypal-btn, .upi-verify-btn {
+  background-color: #0070ba;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.paypal-btn:hover, .upi-verify-btn:hover {
+  background-color: #005ea6;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.payment-details {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.detail-row.total {
+  font-weight: bold;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 6px;
+  margin-top: 6px;
+}
+
+.secure-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.secure-badge i {
+  margin-right: 5px;
+  color: #28a745;
+}
+
+.payment-btn {
+  background-color: #FDC93B;
+  width: 100%;
+}
+
+.payment-btn:hover {
+  background-color: #e6b834;
+}

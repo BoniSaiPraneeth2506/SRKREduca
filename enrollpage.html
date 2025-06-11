@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Enrollment | SRKR Educa</title>
+    <link rel="stylesheet" href="enroll.css">
+    <link rel="stylesheet" href="style1.css">
+    <script
+      src="https://kit.fontawesome.com/0a9bc6dbd1.js" 
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <img src="images/srkrlogo.jpg" alt="logo" />
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fa-solid fa-circle-xmark"></i>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+          <li><button class="link-button" id="registerButton">Register</button></li>
+        </ul>
+        <img id="menu-btn" src="images/menu.png" alt="menu">
+      </div>
+    </nav>
+
+    <!-- Course Header -->
+    <section class="course-header">
+      <h1>JavaScript Beginner Course</h1>
+      <p>Master the fundamentals of JavaScript and start building interactive web applications</p>
+    </section>
+
+    <!-- Enrollment Content -->
+    <section class="enrollment-container">
+      <!-- Course Details -->
+      <div class="course-details">
+        <div class="course-info">
+          <h2>Course Overview</h2>
+          <div class="course-meta">
+            <div class="meta-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>12 weeks</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-video"></i>
+              <span>42 lessons</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-signal"></i>
+              <span>Beginner Level</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa-solid fa-certificate"></i>
+              <span>Certificate</span>
+            </div>
+          </div>
+          
+          <div class="course-desc">
+            <p>This comprehensive JavaScript course is designed for beginners who want to learn the fundamentals of JavaScript programming. You'll start with the basics and progressively build your skills through hands-on exercises and real-world projects.</p>
+            <p>By the end of this course, you'll have a solid understanding of JavaScript concepts and be able to create interactive web applications on your own.</p>
+          </div>
+        </div>
+
+        <div class="what-you-learn">
+          <h3>What You'll Learn</h3>
+          <div class="learn-list">
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>JavaScript fundamentals including variables, data types, and operators</span>
+            </div>
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Control flow with conditionals and loops</span>
+            </div>
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Functions, objects, and arrays</span>
+            </div>
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>DOM manipulation and event handling</span>
+            </div>
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Error handling and debugging techniques</span>
+            </div>
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Building interactive web applications</span>
+            </div>
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>ES6+ modern JavaScript features</span>
+            </div>
+            <div class="learn-item">
+              <i class="fa-solid fa-check"></i>
+              <span>Working with APIs and asynchronous JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-curriculum">
+          <h3>Course Curriculum</h3>
+          
+          <div class="module">
+            <div class="module-header">
+              <h4>Module 1: Getting Started with JavaScript</h4>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="module-content">
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Introduction to JavaScript</span>
+                </div>
+                <div class="lesson-meta">15 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Setting Up Your Development Environment</span>
+                </div>
+                <div class="lesson-meta">20 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-file-alt"></i>
+                  <span>Your First JavaScript Program</span>
+                </div>
+                <div class="lesson-meta">25 min</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="module">
+            <div class="module-header">
+              <h4>Module 2: JavaScript Fundamentals</h4>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="module-content">
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Variables and Data Types</span>
+                </div>
+                <div class="lesson-meta">30 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Operators and Expressions</span>
+                </div>
+                <div class="lesson-meta">25 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-file-alt"></i>
+                  <span>Practice Exercise: Basic Calculations</span>
+                </div>
+                <div class="lesson-meta">45 min</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="module">
+            <div class="module-header">
+              <h4>Module 3: Control Flow</h4>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="module-content">
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Conditional Statements</span>
+                </div>
+                <div class="lesson-meta">35 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Loops and Iterations</span>
+                </div>
+                <div class="lesson-meta">40 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-file-alt"></i>
+                  <span>Mini Project: Number Guessing Game</span>
+                </div>
+                <div class="lesson-meta">60 min</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="module">
+            <div class="module-header">
+              <h4>Module 4: Functions and Objects</h4>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="module-content">
+              <!-- Module content here -->
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Introduction to Functions</span>
+                </div>
+                <div class="lesson-meta">30 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Objects and Properties</span>
+                </div>
+                <div class="lesson-meta">35 min</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="module">
+            <div class="module-header">
+              <h4>Module 5: DOM Manipulation</h4>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="module-content">
+              <!-- Module content here -->
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Introduction to the DOM</span>
+                </div>
+                <div class="lesson-meta">25 min</div>
+              </div>
+              <div class="lesson">
+                <div class="lesson-title">
+                  <i class="fa-solid fa-play-circle"></i>
+                  <span>Selecting and Modifying Elements</span>
+                </div>
+                <div class="lesson-meta">40 min</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Enrollment Sidebar -->
+      <div class="enrollment-sidebar">
+        <div class="course-card">
+          <img src="images/c1.jpg" alt="JavaScript Course" class="card-img">
+          <div class="card-content">
+            <div class="card-price">
+              $50 <span class="original-price">$99</span>
+            </div>
+            <div class="card-features">
+              <div class="card-feature">
+                <i class="fa-solid fa-infinity"></i>
+                <span>Full Lifetime Access</span>
+              </div>
+              <div class="card-feature">
+                <i class="fa-solid fa-mobile-alt"></i>
+                <span>Access on Mobile and TV</span>
+              </div>
+              <div class="card-feature">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certificate of Completion</span>
+              </div>
+              <div class="card-feature">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>30-Day Mentor Support</span>
+              </div>
+            </div>
+            <a href="payment.html" class="enroll-btn">Pay Now</a>
+            <div class="money-back">
+              <i class="fa-solid fa-shield-alt"></i>
+              <span>30-Day Money-Back Guarantee</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="instructor">
+          <h3>Your Instructor</h3>
+          <div class="instructor-profile">
+            <img src="images/pro3.webp" alt="Michael Smith" class="instructor-img">
+            <div class="instructor-info">
+              <h4>Michael Smith</h4>
+              <p>Web Development Mentor</p>
+            </div>
+          </div>
+          <div class="instructor-stats">
+            <div class="stat">
+              <span class="stat-value">4.9</span>
+              <span class="stat-label">Rating</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">12,450</span>
+              <span class="stat-label">Students</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">7</span>
+              <span class="stat-label">Courses</span>
+            </div>
+          </div>
+          <p class="instructor-bio">Michael is a passionate web developer with over 8 years of industry experience. He specializes in front-end development and has helped thousands of students master JavaScript and related technologies.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Add this section right after the course-curriculum div and before the closing div of course-details -->
+
+<div class="course-preview">
+  <div class="preview-header">
+    <h3>Course Preview Videos</h3>
+    <p>Get a taste of our teaching style with these sample lectures</p>
+  </div>
+  
+  <div class="preview-videos">
+    <div class="video-item">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">
+          <i class="fa-solid fa-play-circle"></i>
+          <h4>Introduction to JavaScript Variables</h4>
+        </div>
+        <p>Learn how variables work in JavaScript and how to use them effectively in your code.</p>
+        <div class="video-meta">
+          <span><i class="fa-solid fa-clock"></i> 12 minutes</span>
+          <span><i class="fa-solid fa-eye"></i> Free preview</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="video-item">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-title">
+          <i class="fa-solid fa-play-circle"></i>
+          <h4>Working with JavaScript Functions</h4>
+        </div>
+        <p>Discover how functions can make your code more organized and reusable.</p>
+        <div class="video-meta">
+          <span><i class="fa-solid fa-clock"></i> 15 minutes</span>
+          <span><i class="fa-solid fa-eye"></i> Free preview</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-col">
+        <h3>Top Products</h3>
+        <li>Manage Reputation</li>
+        <li>Power Tools</li>
+        <li>Managed Website</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <li>Jobs</li>
+        <li>Brand Assets</li>
+        <li>Investor Relations</li>
+        <li>Terms of Service</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Features</h3>
+        <li>Manage Reputation</li>
+        <li>Power Tools</li>
+        <li>Managed Website</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <li>Guides</li>
+        <li>Research</li>
+        <li>Experts</li>
+        <li>Marketing Services</li>
+      </div>
+    
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>You can trust us. We only send promo offers.</p>
+        <div class="subscribe">
+          <input type="text" placeholder="Your Email Address">
+          <a href="#" class="yellow">SUBSCRIBE</a>
+        </div>
+      </div>
+    
+      <div class="copyright">
+        <p>Copyright ©2025 All rights reserved | SRKR Educa</p>
+        <div class="pro-links">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Register Popup -->
+    <div id="registerPopup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Create an Account</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+          </div>
+          <button type="submit" class="submit-btn">Register</button>   
+        </form>
+        <a href="#" class="sign-in-link">Already have an account? Sign in</a>
+      </div>
+    </div>
+    
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" class="scroll-top-btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- paynow popup -->
+
+    <div id="paymentPopup" class="popup-overlay">
+      <div class="popup-content payment-popup">
+        <span class="close-btn">&times;</span>
+        <h2>Complete Your Purchase</h2>
+        <div class="course-summary">
+          <img src="images/c1.jpg" alt="JavaScript Course" class="payment-course-img">
+          <div class="course-summary-details">
+            <h3>JavaScript Beginner Course</h3>
+            <div class="payment-price">$50 <span class="original-price">$99</span></div>
+          </div>
+        </div>
+    
+        <form id="paymentForm">
+          <div class="payment-tabs">
+            <div class="payment-tab active" data-tab="card">Credit Card</div>
+            <div class="payment-tab" data-tab="paypal">PayPal</div>
+            <div class="payment-tab" data-tab="upi">UPI</div>
+          </div>
+          
+          <div class="payment-method-content" id="cardPayment">
+            <div class="form-group">
+              <label for="cardName">Name on Card</label>
+              <input type="text" id="cardName" name="cardName" required>
+            </div>
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <div class="card-input-wrapper">
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                <div class="card-icons">
+                  <i class="fa-brands fa-cc-visa"></i>
+                  <i class="fa-brands fa-cc-mastercard"></i>
+                  <i class="fa-brands fa-cc-amex"></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="expDate">Expiration Date</label>
+                <input type="text" id="expDate" name="expDate" placeholder="MM/YY" required>
+              </div>
+              <div class="form-group half">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+              </div>
+            </div>
+          </div>
+    
+          <div class="payment-method-content hidden" id="paypalPayment">
+            <div class="paypal-info">
+              <i class="fa-brands fa-paypal fa-2x"></i>
+              <p>Click the button below to pay with PayPal</p>
+              <button type="button" class="paypal-btn">Continue with PayPal</button>
+            </div>
+          </div>
+    
+          <div class="payment-method-content hidden" id="upiPayment">
+            <div class="upi-info">
+              <div class="qr-code">
+                <img src="/api/placeholder/150/150" alt="QR Code">
+              </div>
+              <p>Scan the QR code or enter your UPI ID below</p>
+              <div class="form-group">
+                <label for="upiId">UPI ID</label>
+                <input type="text" id="upiId" name="upiId" placeholder="yourname@upi">
+              </div>
+              <button type="button" class="upi-verify-btn">Verify & Pay</button>
+            </div>
+          </div>
+    
+          <div class="payment-details">
+            <div class="detail-row">
+              <span>Course Price</span>
+              <span>$99</span>
+            </div>
+            <div class="detail-row">
+              <span>Discount</span>
+              <span>-$49</span>
+            </div>
+            <div class="detail-row total">
+              <span>Total Amount</span>
+              <span>$50</span>
+            </div>
+          </div>
+    
+          <div class="secure-badge">
+            <i class="fa-solid fa-lock"></i>
+            <span>Your payment information is secure</span>
+          </div>
+    
+          <button type="submit" class="submit-btn payment-btn">Complete Payment</button>
+        </form>
+      </div>
+    </div>
+ 
+  </body>
+  <script>
+      // Menu toggle functionality
+$('#menu-btn').click(function () {
+  $('nav .navigation ul').addClass('active');
+});
+
+$('#menu-close').click(function () {
+  $('nav .navigation ul').removeClass('active');
+});
+
+// Register popup functionality
+const registerButton = document.getElementById('registerButton');
+const registerPopup = document.getElementById('registerPopup');
+const closeBtn = document.querySelector('.close-btn');
+
+registerButton.addEventListener('click', function() {
+  registerPopup.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', function() {
+  registerPopup.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target === registerPopup) {
+    registerPopup.style.display = 'none';
+  }
+});
+
+// Course curriculum accordion
+const moduleHeaders = document.querySelectorAll('.module-header');
+
+moduleHeaders.forEach(header => {
+  header.addEventListener('click', function() {
+    const content = this.nextElementSibling;
+    const icon = this.querySelector('i');
+    
+    // Toggle active class
+    content.classList.toggle('active');
+    
+    // Change icon
+    if (content.classList.contains('active')) {
+      icon.classList.remove('fa-chevron-down');
+      icon.classList.add('fa-chevron-up');
+    } else {
+      icon.classList.remove('fa-chevron-up');
+      icon.classList.add('fa-chevron-down');
+    }
+  });
+});
+
+// Scroll to top functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.style.display = 'flex';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+  
+  // Scroll to top when button is clicked
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Payment popup functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const enrollBtn = document.querySelector('.enroll-btn');
+  const paymentPopup = document.getElementById('paymentPopup');
+  const closePaymentBtn = paymentPopup.querySelector('.close-btn');
+  const paymentForm = document.getElementById('paymentForm');
+  const paymentTabs = document.querySelectorAll('.payment-tab');
+  
+  // Open payment popup when enroll button is clicked
+  enrollBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    paymentPopup.style.display = 'flex';
+  });
+  
+  // Close payment popup
+  closePaymentBtn.addEventListener('click', function() {
+    paymentPopup.style.display = 'none';
+  });
+  
+  // Close popup when clicking outside
+  window.addEventListener('click', function(event) {
+    if (event.target === paymentPopup) {
+      paymentPopup.style.display = 'none';
+    }
+  });
+  
+  // Payment method tabs
+  paymentTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      // Remove active class from all tabs
+      paymentTabs.forEach(t => t.classList.remove('active'));
+      
+      // Add active class to clicked tab
+      this.classList.add('active');
+      
+      // Hide all payment method contents
+      document.querySelectorAll('.payment-method-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      
+      // Show selected payment method content
+      const selectedMethod = this.getAttribute('data-tab');
+      document.getElementById(selectedMethod + 'Payment').classList.remove('hidden');
+    });
+  });
+  
+  // Handle payment form submission
+  paymentForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Here you would normally process the payment through a payment gateway
+    
+    // For demo, show success message
+    alert('Payment successful! You now have access to the course.');
+    paymentPopup.style.display = 'none';
+    
+    // Redirect to course content or dashboard
+    // window.location.href = 'course-content.html';
+  });
+  
+  // Format card number with spaces (simple version)
+  const cardNumberInput = document.getElementById('cardNumber');
+  if (cardNumberInput) {
+    cardNumberInput.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+      let formattedValue = '';
+      
+      for (let i = 0; i < value.length; i++) {
+        if (i > 0 && i % 4 === 0) {
+          formattedValue += ' ';
+        }
+        formattedValue += value[i];
+      }
+      
+      e.target.value = formattedValue;
+    });
+  }
+  
+  // Format expiration date
+  const expDateInput = document.getElementById('expDate');
+  if (expDateInput) {
+    expDateInput.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      
+      if (value.length > 2) {
+        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+      }
+      
+      e.target.value = value;
+    });
+  }
+});
+
+  </script>
+  
+</html>

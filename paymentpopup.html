@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paymentPopup" class="popup-overlay">
+        <div class="popup-content payment-popup">
+          <span class="close-btn">&times;</span>
+          <h2>Complete Your Purchase</h2>
+          <div class="course-summary">
+            <img src="images/c1.jpg" alt="JavaScript Course" class="payment-course-img">
+            <div class="course-summary-details">
+              <h3>JavaScript Beginner Course</h3>
+              <div class="payment-price">$50 <span class="original-price">$99</span></div>
+            </div>
+          </div>
+      
+          <form id="paymentForm">
+            <div class="payment-tabs">
+              <div class="payment-tab active" data-tab="card">Credit Card</div>
+              <div class="payment-tab" data-tab="paypal">PayPal</div>
+              <div class="payment-tab" data-tab="upi">UPI</div>
+            </div>
+            
+            <div class="payment-method-content" id="cardPayment">
+              <div class="form-group">
+                <label for="cardName">Name on Card</label>
+                <input type="text" id="cardName" name="cardName" required>
+              </div>
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <div class="card-input-wrapper">
+                  <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                  <div class="card-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group half">
+                  <label for="expDate">Expiration Date</label>
+                  <input type="text" id="expDate" name="expDate" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group half">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                </div>
+              </div>
+            </div>
+      
+            <div class="payment-method-content hidden" id="paypalPayment">
+              <div class="paypal-info">
+                <i class="fa-brands fa-paypal fa-2x"></i>
+                <p>Click the button below to pay with PayPal</p>
+                <button type="button" class="paypal-btn">Continue with PayPal</button>
+              </div>
+            </div>
+      
+            <div class="payment-method-content hidden" id="upiPayment">
+              <div class="upi-info">
+                <div class="qr-code">
+                  <img src="/api/placeholder/150/150" alt="QR Code">
+                </div>
+                <p>Scan the QR code or enter your UPI ID below</p>
+                <div class="form-group">
+                  <label for="upiId">UPI ID</label>
+                  <input type="text" id="upiId" name="upiId" placeholder="yourname@upi">
+                </div>
+                <button type="button" class="upi-verify-btn">Verify & Pay</button>
+              </div>
+            </div>
+      
+            <div class="payment-details">
+              <div class="detail-row">
+                <span>Course Price</span>
+                <span>$99</span>
+              </div>
+              <div class="detail-row">
+                <span>Discount</span>
+                <span>-$49</span>
+              </div>
+              <div class="detail-row total">
+                <span>Total Amount</span>
+                <span>$50</span>
+              </div>
+            </div>
+      
+            <div class="secure-badge">
+              <i class="fa-solid fa-lock"></i>
+              <span>Your payment information is secure</span>
+            </div>
+      
+            <button type="submit" class="submit-btn payment-btn">Complete Payment</button>
+          </form>
+        </div>
+      </div>
+      
+</body>
+</html>

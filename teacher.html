@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRKR Educa - Teacher Dashboard</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="teacher.css">
+    <script
+      src="https://kit.fontawesome.com/0a9bc6dbd1.js" 
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <nav>
+      <img src="images/srkrlogo.jpg" alt="logo" />
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fa-solid fa-circle-xmark"></i>
+          <li><a href="#home">Dashboard</a></li>
+          <li><a href="#mycourses">My Courses</a></li>
+          <li><a href="#students">Students</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="contact.html">Support</a></li>
+          <li><div class="user-profile"><i class="fa-solid fa-user"></i> <span id="teacherName">Teacher</span></div></li>
+          <li><button class="link-button" id="logoutButton">Logout</button></li>
+        </ul>
+        <img id="menu-btn" src="images/menu.png" alt="menu">
+      </div>
+    </nav>
+    
+    <section id="home">
+        <!-- <h2 class="typing">Enhance your Future with SRKREduca</h2> -->
+        <h2 class="typing"><span id="element"></span></h2>
+        <p>
+          Welcome to SRKR Educa — your gateway to quality learning and skill development. Explore top courses, expert guidance, and a community dedicated to your success.
+        </p>
+        <div class="btn">
+          <a class="blue" href="learnmore.html">Learn more</a>
+          <a class="yellow" href="courses.html">Visit Courses</a>
+        </div>
+      </section>
+    
+    <section id="statistics">
+      <h1>Teaching Overview</h1>
+      <p>Track your impact and progress as an educator</p>
+      <div class="fea-base">
+        <div class="fea-box">
+          <i class="fa-solid fa-users"></i>
+          <h3>Total Students</h3>
+          <p class="stat-number">142</p>
+        </div>
+        <div class="fea-box">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>Active Courses</h3>
+          <p class="stat-number">5</p>
+        </div>
+        <div class="fea-box">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Completion Rate</h3>
+          <p class="stat-number">87%</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="mycourses">
+      <h1>My Courses</h1>
+      <p>Manage and monitor your current course offerings</p>
+      <div class="course-box">
+        <div class="courses">
+            <img src="images/c1.jpg" alt="course1">
+            <div class="details">
+             <span>Last updated: 2 days ago</span>
+             <h6>JavaScript Fundamentals</h6>
+             <div class="stats">
+                <span><i class="fas fa-user-graduate"></i> 38 Students</span>
+                <span><i class="fas fa-star"></i> 4.8</span>
+             </div>
+            </div>
+            <div class="course-actions">
+                <button class="course-btn"><i class="fas fa-edit"></i> Edit</button>
+            </div>
+        </div>
+
+        <div class="courses">
+            <img src="images/c2.jpg" alt="course2">
+            <div class="details">
+             <span>Last updated: 1 week ago</span>
+             <h6>Advanced Python Programming</h6>
+             <div class="stats">
+                <span><i class="fas fa-user-graduate"></i> 27 Students</span>
+                <span><i class="fas fa-star"></i> 4.6</span>
+             </div>
+            </div>
+            <div class="course-actions">
+                <button class="course-btn"><i class="fas fa-edit"></i> Edit</button>
+            </div>
+        </div>
+
+        <div class="courses">
+            <img src="images/c3.jpg" alt="course3">
+            <div class="details">
+             <span>Last updated: 3 days ago</span>
+             <h6>Web Development Bootcamp</h6>
+             <div class="stats">
+                <span><i class="fas fa-user-graduate"></i> 45 Students</span>
+                <span><i class="fas fa-star"></i> 4.9</span>
+             </div>
+            </div>
+            <div class="course-actions">
+                <button class="course-btn"><i class="fas fa-edit"></i> Edit</button>
+            </div>
+        </div>
+
+        <div class="courses">
+            <img src="images/c4.jpg" alt="course4">
+            <div class="details">
+             <span>Last updated: 2 weeks ago</span>
+             <h6>Data Analysis with R</h6>
+             <div class="stats">
+                <span><i class="fas fa-user-graduate"></i> 19 Students</span>
+                <span><i class="fas fa-star"></i> 4.5</span>
+             </div>
+            </div>
+            <div class="course-actions">
+                <button class="course-btn"><i class="fas fa-edit"></i> Edit</button>
+            </div>
+        </div>
+      </div>
+      
+      <div class="center-button">
+        <button id="createcourse" class="create-course-btn"><i class="fas fa-plus"></i> Create New Course</button>
+      </div>
+    </section>
+    
+    <section id="upcoming">
+       <div class="reminder">
+        <p>Upcoming Schedule</p>
+        <h1>Next Live Session</h1>
+        <div class="time">
+            <div class="date">
+                02 <br> Days
+            </div>
+            <div class="date">
+                14 <br> Hours
+            </div>
+            <div class="date">
+                35 <br> Minutes
+            </div>
+            <div class="date">
+                10 <br> Seconds
+            </div>
+        </div>
+        <p class="session-info">Advanced Python Programming - Module 5</p>
+       </div>
+       <div class="form">
+        <h3>Quick Announcement</h3>
+         <input type="text" placeholder="Title" name="" id="">
+         <textarea placeholder="Message to students"></textarea>
+         <div class="options">
+           <label><input type="checkbox"> Send as email</label>
+           <label><input type="checkbox"> Push notification</label>
+         </div>
+         <div class="btn">
+          <a class="yellow" href="#">Send</a>
+         </div>
+       </div>
+    </section>
+    
+    <section id="students">
+      <h1>Recent Student Activity</h1>
+      <p>Monitor your students' progress and engagement</p>
+      <div class="student-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Course</th>
+              <th>Progress</th>
+              <th>Last Active</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alex Johnson</td>
+              <td>JavaScript Fundamentals</td>
+              <td><div class="progress-bar"><div class="progress" style="width: 78%;">78%</div></div></td>
+              <td>Today</td>
+              <td><button class="action-btn">Message</button></td>
+            </tr>
+            <tr>
+              <td>Maya Patel</td>
+              <td>Advanced Python Programming</td>
+              <td><div class="progress-bar"><div class="progress" style="width: 92%;">92%</div></div></td>
+              <td>Yesterday</td>
+              <td><button class="action-btn">Message</button></td>
+            </tr>
+            <tr>
+              <td>Carlos Rodriguez</td>
+              <td>Web Development Bootcamp</td>
+              <td><div class="progress-bar"><div class="progress" style="width: 45%;">45%</div></div></td>
+              <td>3 days ago</td>
+              <td><button class="action-btn">Message</button></td>
+            </tr>
+            <tr>
+              <td>Sarah Kim</td>
+              <td>Data Analysis with R</td>
+              <td><div class="progress-bar"><div class="progress" style="width: 65%;">65%</div></div></td>
+              <td>Today</td>
+              <td><button class="action-btn">Message</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="view-all">
+          <a href="#" class="view-all-link">View All Students <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="resources">
+      <h1>Teaching Resources</h1>
+      <p>Tools and materials to enhance your teaching experience</p>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <i class="fas fa-file-pdf"></i>
+          <h3>Assignment Templates</h3>
+          <p>Ready-to-use templates for course assignments</p>
+          <a href="#" class="resource-link">Access</a>
+        </div>
+        
+        <div class="resource-card">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Analytics Tools</h3>
+          <p>Advanced insights into student performance</p>
+          <a href="#" class="resource-link">Access</a>
+        </div>
+        
+        <div class="resource-card">
+          <i class="fas fa-video"></i>
+          <h3>Recording Studio</h3>
+          <p>Tools for creating professional video lectures</p>
+          <a href="#" class="resource-link">Access</a>
+        </div>
+        
+        <div class="resource-card">
+          <i class="fas fa-users"></i>
+          <h3>Community Forum</h3>
+          <p>Connect with other educators on the platform</p>
+          <a href="#" class="resource-link">Access</a>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <li>Dashboard</li>
+      <li>My Courses</li>
+      <li>Students</li>
+      <li>Resources</li>
+    </div>
+  
+    <div class="footer-col">
+      <h3>Teacher Tools</h3>
+      <li>Course Builder</li>
+      <li>Assessment Creator</li>
+      <li>Gradebook</li>
+      <li>Discussion Forum</li>
+    </div>
+  
+    <div class="footer-col">
+      <h3>Help & Support</h3>
+      <li>Teacher Guide</li>
+      <li>FAQs</li>
+      <li>Contact Support</li>
+      <li>Technical Help</li>
+    </div>
+  
+    <div class="footer-col">
+      <h3>Resources</h3>
+      <li>Teaching Tips</li>
+      <li>Best Practices</li>
+      <li>Educational Research</li>
+      <li>Professional Development</li>
+    </div>
+  
+    <div class="footer-col">
+      <h3>Updates</h3>
+      <p>Receive platform updates and teaching resources.</p>
+      <div class="subscribe">
+        <input type="text" placeholder="Your Email Address">
+        <a href="#" class="yellow">SUBSCRIBE</a>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      <p>Copyright ©2025 All rights reserved | SRKR Educa</p>
+      <div class="pro-links">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+    </footer>
+    
+    <!-- Create Course Modal -->
+    <div id="createCourseModal" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Create New Course</h2>
+        <form id="courseForm">
+          <div class="form-group">
+            <label for="courseTitle">Course Title</label>
+            <input type="text" id="courseTitle" name="courseTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="courseDescription">Course Description</label>
+            <textarea id="courseDescription" name="courseDescription" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="courseCategory">Category</label>
+            <select id="courseCategory" name="courseCategory" required>
+              <option value="">Select a category</option>
+              <option value="programming">Programming</option>
+              <option value="design">Design</option>
+              <option value="business">Business</option>
+              <option value="marketing">Marketing</option>
+              <option value="science">Science</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="courseImage">Course Thumbnail</label>
+            <input type="file" id="courseImage" name="courseImage">
+          </div>
+          <button type="submit" class="submit-btn">Create Course</button>   
+        </form>
+      </div>
+    </div>
+    
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" class="scroll-top-btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Welcome to Your Teaching Dashboard"],
+        typeSpeed: 50,
+      });
+      
+      $('#menu-btn').click(function () {
+        $('nav .navigation ul').addClass('active');
+      });
+
+      $('#menu-close').click(function () {
+        $('nav .navigation ul').removeClass('active');
+      });
+      
+      // Scroll to top functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) { // Show button after scrolling down 300px
+            scrollToTopBtn.style.display = 'flex';
+          } else {
+            scrollToTopBtn.style.display = 'none';
+          }
+        });
+        
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling animation
+          });
+        });
+        
+        // Create Course Modal
+        const createCourseBtn = document.getElementById('createcourse');
+        const createCourseModal = document.getElementById('createCourseModal');
+        const closeModalBtn = document.querySelector('#createCourseModal .close-btn');
+        
+        createCourseBtn.addEventListener('click', function() {
+          createCourseModal.style.display = 'flex';
+        });
+        
+        closeModalBtn.addEventListener('click', function() {
+          createCourseModal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+          if (event.target === createCourseModal) {
+            createCourseModal.style.display = 'none';
+          }
+        });
+        
+        // Display teacher name (would come from login)
+        document.getElementById('teacherName').textContent = "Prof. Johnson";
+        
+        // Logout functionality
+        document.getElementById('logoutButton').addEventListener('click', function() {
+          window.location.href = "index.html";
+        });
+      });
+    </script>
+    
+  </body>
+</html>
