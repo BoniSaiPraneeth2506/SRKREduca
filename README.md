@@ -4,18 +4,26 @@ Welcome to SRKR Educa, a simple and responsive educational website built using H
 
 ## 🚀 Features
 ✅ Responsive landing page design
+
 🧭 Fixed navigation bar with smooth scrolling
+
 🖼️ Hero section with background image and call-to-action buttons
+
 ⭐ Features section to highlight key offerings
+
 📚 Popular courses section with cards
+
 📝 Registration section with a form and countdown timer
+
 📩 Newsletter subscription section
+
 📱 Fully responsive design for mobile, tablet, and desktop
+
 🦶 Footer with social links and navigation
 
 ## 🔧 Tech Stack
 
-HTML5
-CSS3
-JavaScript (vanilla)
+HTML5,
+CSS3,
+JavaScript 
 
